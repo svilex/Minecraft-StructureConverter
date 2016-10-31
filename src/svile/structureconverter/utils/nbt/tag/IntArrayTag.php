@@ -15,10 +15,10 @@
  *
  */
 
-namespace svile\cuboidconverter\utils\nbt\tag;
+namespace svile\structureconverter\utils\nbt\tag;
 
 
-use svile\cuboidconverter\utils\nbt\NBT;
+use svile\structureconverter\utils\nbt\NBT;
 
 
 class IntArrayTag extends NamedTag

@@ -15,21 +15,21 @@
  *
  */
 
-namespace svile\cuboidconverter;
+namespace svile\structureconverter;
 
 
-use svile\cuboidconverter\utils\console\Console;
+use svile\structureconverter\utils\console\Console;
 
-use svile\cuboidconverter\utils\NamedId;
+use svile\structureconverter\utils\NamedId;
 
-use svile\cuboidconverter\utils\nbt\NBT;
-use svile\cuboidconverter\utils\nbt\tag\CompoundTag;
-use svile\cuboidconverter\utils\nbt\tag\ListTag;
-use svile\cuboidconverter\utils\nbt\tag\NamedTag;
-use svile\cuboidconverter\utils\nbt\tag\IntTag;
-use svile\cuboidconverter\utils\nbt\tag\ShortTag;
-use svile\cuboidconverter\utils\nbt\tag\StringTag;
-use svile\cuboidconverter\utils\nbt\tag\ByteArrayTag;
+use svile\structureconverter\utils\nbt\NBT;
+use svile\structureconverter\utils\nbt\tag\CompoundTag;
+use svile\structureconverter\utils\nbt\tag\ListTag;
+use svile\structureconverter\utils\nbt\tag\NamedTag;
+use svile\structureconverter\utils\nbt\tag\IntTag;
+use svile\structureconverter\utils\nbt\tag\ShortTag;
+use svile\structureconverter\utils\nbt\tag\StringTag;
+use svile\structureconverter\utils\nbt\tag\ByteArrayTag;
 
 
 abstract class StructureBlock

@@ -15,7 +15,7 @@
  *
  */
 
-namespace svile\cuboidconverter\utils\binary;
+namespace svile\structureconverter\utils\binary;
 
 if(!defined('ENDIANNESS'))
     define('ENDIANNESS', (pack('d', 1) === "\77\360\0\0\0\0\0\0" ? Binary::BIG_ENDIAN : Binary::LITTLE_ENDIAN));

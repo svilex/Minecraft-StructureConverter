@@ -3,8 +3,8 @@
 namespace svile {
 
 
-    use svile\cuboidconverter\StructureBlock;
-    use svile\cuboidconverter\utils\console\Console;
+    use svile\structureconverter\StructureBlock;
+    use svile\structureconverter\utils\console\Console;
 
 
     set_time_limit(0);

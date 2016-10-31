@@ -15,11 +15,11 @@
  *
  */
 
-namespace svile\cuboidconverter\utils\nbt\tag;
+namespace svile\structureconverter\utils\nbt\tag;
 
 
-use svile\cuboidconverter\utils\nbt\NBT;
-use svile\cuboidconverter\utils\nbt\tag\ListTag as TagEnum;
+use svile\structureconverter\utils\nbt\NBT;
+use svile\structureconverter\utils\nbt\tag\ListTag as TagEnum;
 
 
 class ListTag extends NamedTag implements \ArrayAccess, \Countable

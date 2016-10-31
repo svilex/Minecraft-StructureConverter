@@ -15,7 +15,7 @@
  *
  */
 
-namespace svile\cuboidconverter\utils\nbt\tag;
+namespace svile\structureconverter\utils\nbt\tag;
 
 abstract class NamedTag extends Tag
 {

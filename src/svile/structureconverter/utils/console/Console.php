@@ -15,9 +15,9 @@
  *
  */
 
-namespace svile\cuboidconverter\utils\console;
+namespace svile\structureconverter\utils\console;
 
-use svile\cuboidconverter\utils\Utils;
+use svile\structureconverter\utils\Utils;
 
 abstract class Console
 {

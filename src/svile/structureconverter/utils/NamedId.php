@@ -15,7 +15,7 @@
  *
  */
 
-namespace svile\cuboidconverter\utils;
+namespace svile\structureconverter\utils;
 
 abstract class NamedId
 {

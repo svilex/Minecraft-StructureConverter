@@ -15,25 +15,25 @@
  *
  */
 
-namespace svile\cuboidconverter\utils\nbt;
+namespace svile\structureconverter\utils\nbt;
 
 
-use svile\cuboidconverter\utils\binary\Binary;
+use svile\structureconverter\utils\binary\Binary;
 
-use svile\cuboidconverter\utils\nbt\tag\ByteTag;
-use svile\cuboidconverter\utils\nbt\tag\ByteArrayTag;
-use svile\cuboidconverter\utils\nbt\tag\CompoundTag;
-use svile\cuboidconverter\utils\nbt\tag\DoubleTag;
-use svile\cuboidconverter\utils\nbt\tag\EndTag;
-use svile\cuboidconverter\utils\nbt\tag\ListTag;
-use svile\cuboidconverter\utils\nbt\tag\FloatTag;
-use svile\cuboidconverter\utils\nbt\tag\IntTag;
-use svile\cuboidconverter\utils\nbt\tag\IntArrayTag;
-use svile\cuboidconverter\utils\nbt\tag\LongTag;
-use svile\cuboidconverter\utils\nbt\tag\NamedTAG;
-use svile\cuboidconverter\utils\nbt\tag\ShortTag;
-use svile\cuboidconverter\utils\nbt\tag\StringTag;
-use svile\cuboidconverter\utils\nbt\tag\Tag;
+use svile\structureconverter\utils\nbt\tag\ByteTag;
+use svile\structureconverter\utils\nbt\tag\ByteArrayTag;
+use svile\structureconverter\utils\nbt\tag\CompoundTag;
+use svile\structureconverter\utils\nbt\tag\DoubleTag;
+use svile\structureconverter\utils\nbt\tag\EndTag;
+use svile\structureconverter\utils\nbt\tag\ListTag;
+use svile\structureconverter\utils\nbt\tag\FloatTag;
+use svile\structureconverter\utils\nbt\tag\IntTag;
+use svile\structureconverter\utils\nbt\tag\IntArrayTag;
+use svile\structureconverter\utils\nbt\tag\LongTag;
+use svile\structureconverter\utils\nbt\tag\NamedTAG;
+use svile\structureconverter\utils\nbt\tag\ShortTag;
+use svile\structureconverter\utils\nbt\tag\StringTag;
+use svile\structureconverter\utils\nbt\tag\Tag;
 
 
 final class NBT
