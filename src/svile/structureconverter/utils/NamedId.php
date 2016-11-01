@@ -328,10 +328,45 @@ abstract class NamedId
         self::$palette['bookshelf'] = [47];
         self::$palette['mossy_cobblestone'] = [48];
         self::$palette['obsidian'] = [49];
-        self::$palette['torch'] = [50];
+        self::$palette['torch'] = [
+            50 | 5 << 8,
+            'facing' => [
+                50 | 5 << 8,
+                'east'  => 50 | 1 << 8,
+                'west'  => 50 | 2 << 8,
+                'south' => 50 | 3 << 8,
+                'north' => 50 | 4 << 8,
+                'up'    => 50 | 5 << 8
+            ]
+        ];
         self::$palette['fire'] = [51];
         self::$palette['mob_spawner'] = [52];//not in my list
-        self::$palette['oak_stairs'] = [53];
+        self::$palette['oak_stairs'] = [
+            53,
+            'half' => [
+                53,
+                'top'    => [
+                    53 | 4 << 8,
+                    'facing' => [
+                        53 | 4 << 8,
+                        'east'  => 53 | 4 << 8,
+                        'west'  => 53 | 5 << 8,
+                        'south' => 53 | 6 << 8,
+                        'north' => 53 | 7 << 8
+                    ]
+                ],
+                'bottom' => [
+                    53,
+                    'facing' => [
+                        53,
+                        'east'  => 53,
+                        'west'  => 53 | 1 << 8,
+                        'south' => 53 | 2 << 8,
+                        'north' => 53 | 3 << 8
+                    ]
+                ]
+            ]
+        ];
         self::$palette['chest'] = [54];
         self::$palette['redstone_wire'] = [55];
         self::$palette['diamond_ore'] = [56];
@@ -343,9 +378,42 @@ abstract class NamedId
         self::$palette['lit_furnace'] = [62];//not in my list
         self::$palette['standing_sign'] = [63];
         self::$palette['wooden_door'] = [64];
-        self::$palette['ladder'] = [65];
+        self::$palette['ladder'] = [
+            65 | 2 << 8,
+            'facing' => [
+                'north' => 65 | 2 << 8,
+                'south' => 65 | 3 << 8,
+                'west'  => 65 | 4 << 8,
+                'east'  => 65 | 5 << 8
+            ]
+        ];
         self::$palette['rail'] = [66];
-        self::$palette['stone_stairs'] = [67];
+        self::$palette['stone_stairs'] = [
+            67,
+            'half' => [
+                67,
+                'top'    => [
+                    67 | 4 << 8,
+                    'facing' => [
+                        67 | 4 << 8,
+                        'east'  => 67 | 4 << 8,
+                        'west'  => 67 | 5 << 8,
+                        'south' => 67 | 6 << 8,
+                        'north' => 67 | 7 << 8
+                    ]
+                ],
+                'bottom' => [
+                    67,
+                    'facing' => [
+                        67,
+                        'east'  => 67,
+                        'west'  => 67 | 1 << 8,
+                        'south' => 67 | 2 << 8,
+                        'north' => 67 | 3 << 8
+                    ]
+                ]
+            ]
+        ];
         self::$palette['wall_sign'] = [68];
         self::$palette['lever'] = [69];
         self::$palette['stone_pressure_plate'] = [70];
@@ -364,16 +432,55 @@ abstract class NamedId
         self::$palette['reeds'] = [83];
         self::$palette['jukebox'] = [84];
         self::$palette['fence'] = [85];
-        self::$palette['pumpkin'] = [86];
+        self::$palette['pumpkin'] = [
+            86,
+            'facing' => [
+                86,
+                'south' => 86,
+                'west'  => 86 | 1 << 8,
+                'north' => 86 | 2 << 8,
+                'east'  => 86 | 3 << 8,
+            ]
+        ];
         self::$palette['netherrack'] = [87];
         self::$palette['soul_sand'] = [88];
         self::$palette['glowstone'] = [89];
         self::$palette['portal'] = [90];//not in my list
-        self::$palette['lit_pumpkin'] = [91];
+        self::$palette['lit_pumpkin'] = [
+            91,
+            'facing' => [
+                91,
+                'south' => 91,
+                'west'  => 91 | 1 << 8,
+                'north' => 91 | 2 << 8,
+                'east'  => 91 | 3 << 8,
+            ]
+        ];
         self::$palette['cake'] = [92];
         self::$palette['unpowered_repeater'] = [93];
         self::$palette['powered_repeater'] = [94];//not in my list
-        self::$palette['stained_glass'] = [95];
+        self::$palette['stained_glass'] = [
+            95,
+            'color' => [
+                95,
+                'white'      => 95,
+                'orange'     => 95 | 1 << 8,
+                'magenta'    => 95 | 2 << 8,
+                'light_blue' => 95 | 3 << 8,
+                'yellow'     => 95 | 4 << 8,
+                'lime'       => 95 | 5 << 8,
+                'pink'       => 95 | 6 << 8,
+                'gray'       => 95 | 7 << 8,
+                'silver'     => 95 | 8 << 8,
+                'cyan'       => 95 | 9 << 8,
+                'purple'     => 95 | 10 << 8,
+                'blue'       => 95 | 11 << 8,
+                'brown'      => 95 | 12 << 8,
+                'green'      => 95 | 13 << 8,
+                'red'        => 95 | 14 << 8,
+                'black'      => 95 | 15 << 8,
+            ]
+        ];
         self::$palette['trapdoor'] = [96];
         self::$palette['monster_egg'] = [97];
         self::$palette['stonebrick'] = [98];
@@ -384,15 +491,98 @@ abstract class NamedId
         self::$palette['melon_block'] = [103];
         self::$palette['pumpkin_stem'] = [104];
         self::$palette['melon_stem'] = [105];
-        self::$palette['vine'] = [106];
+        self::$palette['vine'] = [
+            106 | 2 << 8,
+            'facing' => [
+                'south' => 106 | 1 << 8,
+                'west'  => 106 | 2 << 8,
+                'north' => 106 | 4 << 8,
+                'east'  => 106 | 8 << 8
+            ]
+        ];
         self::$palette['fence_gate'] = [107];
-        self::$palette['brick_stairs'] = [108];
-        self::$palette['stone_brick_stairs'] = [109];
+        self::$palette['brick_stairs'] = [
+            108,
+            'half' => [
+                108,
+                'top'    => [
+                    108 | 4 << 8,
+                    'facing' => [
+                        108 | 4 << 8,
+                        'east'  => 108 | 4 << 8,
+                        'west'  => 108 | 5 << 8,
+                        'south' => 108 | 6 << 8,
+                        'north' => 108 | 7 << 8
+                    ]
+                ],
+                'bottom' => [
+                    108,
+                    'facing' => [
+                        108,
+                        'east'  => 108,
+                        'west'  => 108 | 1 << 8,
+                        'south' => 108 | 2 << 8,
+                        'north' => 108 | 3 << 8
+                    ]
+                ]
+            ]
+        ];
+        self::$palette['stone_brick_stairs'] = [
+            109,
+            'half' => [
+                109,
+                'top'    => [
+                    109 | 4 << 8,
+                    'facing' => [
+                        109 | 4 << 8,
+                        'east'  => 109 | 4 << 8,
+                        'west'  => 109 | 5 << 8,
+                        'south' => 109 | 6 << 8,
+                        'north' => 109 | 7 << 8
+                    ]
+                ],
+                'bottom' => [
+                    109,
+                    'facing' => [
+                        109,
+                        'east'  => 109,
+                        'west'  => 109 | 1 << 8,
+                        'south' => 109 | 2 << 8,
+                        'north' => 109 | 3 << 8
+                    ]
+                ]
+            ]
+        ];
         self::$palette['mycelium'] = [110];
         self::$palette['waterlily'] = [111];
         self::$palette['nether_brick'] = [112];
         self::$palette['nether_brick_fence'] = [113];
-        self::$palette['nether_brick_stairs'] = [114];
+        self::$palette['nether_brick_stairs'] = [
+            114,
+            'half' => [
+                114,
+                'top'    => [
+                    114 | 4 << 8,
+                    'facing' => [
+                        114 | 4 << 8,
+                        'east'  => 114 | 4 << 8,
+                        'west'  => 114 | 5 << 8,
+                        'south' => 114 | 6 << 8,
+                        'north' => 114 | 7 << 8
+                    ]
+                ],
+                'bottom' => [
+                    114,
+                    'facing' => [
+                        114,
+                        'east'  => 114,
+                        'west'  => 114 | 1 << 8,
+                        'south' => 114 | 2 << 8,
+                        'north' => 114 | 3 << 8
+                    ]
+                ]
+            ]
+        ];
         self::$palette['nether_wart'] = [115];
         self::$palette['enchanting_table'] = [116];
         self::$palette['brewing_stand'] = [117];
@@ -406,15 +596,115 @@ abstract class NamedId
         self::$palette['double_wooden_slab'] = [125];
         self::$palette['wooden_slab'] = [126];
         self::$palette['cocoa'] = [127];
-        self::$palette['sandstone_stairs'] = [128];
+        self::$palette['sandstone_stairs'] = [
+            128,
+            'half' => [
+                128,
+                'top'    => [
+                    128 | 4 << 8,
+                    'facing' => [
+                        128 | 4 << 8,
+                        'east'  => 128 | 4 << 8,
+                        'west'  => 128 | 5 << 8,
+                        'south' => 128 | 6 << 8,
+                        'north' => 128 | 7 << 8
+                    ]
+                ],
+                'bottom' => [
+                    128,
+                    'facing' => [
+                        128,
+                        'east'  => 128,
+                        'west'  => 128 | 1 << 8,
+                        'south' => 128 | 2 << 8,
+                        'north' => 128 | 3 << 8
+                    ]
+                ]
+            ]
+        ];
         self::$palette['emerald_ore'] = [129];
         self::$palette['ender_chest'] = [130];
         self::$palette['tripwire_hook'] = [131];
         self::$palette['tripwire'] = [132];//not in my list
         self::$palette['emerald_block'] = [133];
-        self::$palette['spruce_stairs'] = [134];
-        self::$palette['birch_stairs'] = [135];
-        self::$palette['jungle_stairs'] = [136];
+        self::$palette['spruce_stairs'] = [
+            134,
+            'half' => [
+                134,
+                'top'    => [
+                    134 | 4 << 8,
+                    'facing' => [
+                        134 | 4 << 8,
+                        'east'  => 134 | 4 << 8,
+                        'west'  => 134 | 5 << 8,
+                        'south' => 134 | 6 << 8,
+                        'north' => 134 | 7 << 8
+                    ]
+                ],
+                'bottom' => [
+                    134,
+                    'facing' => [
+                        134,
+                        'east'  => 134,
+                        'west'  => 134 | 1 << 8,
+                        'south' => 134 | 2 << 8,
+                        'north' => 134 | 3 << 8
+                    ]
+                ]
+            ]
+        ];
+        self::$palette['birch_stairs'] = [
+            135,
+            'half' => [
+                135,
+                'top'    => [
+                    135 | 4 << 8,
+                    'facing' => [
+                        135 | 4 << 8,
+                        'east'  => 135 | 4 << 8,
+                        'west'  => 135 | 5 << 8,
+                        'south' => 135 | 6 << 8,
+                        'north' => 135 | 7 << 8
+                    ]
+                ],
+                'bottom' => [
+                    135,
+                    'facing' => [
+                        135,
+                        'east'  => 135,
+                        'west'  => 135 | 1 << 8,
+                        'south' => 135 | 2 << 8,
+                        'north' => 135 | 3 << 8
+                    ]
+                ]
+            ]
+        ];
+        self::$palette['jungle_stairs'] = [
+            136,
+            'half' => [
+                136,
+                'top'    => [
+                    136 | 4 << 8,
+                    'facing' => [
+                        136 | 4 << 8,
+                        'east'  => 136 | 4 << 8,
+                        'west'  => 136 | 5 << 8,
+                        'south' => 136 | 6 << 8,
+                        'north' => 136 | 7 << 8
+                    ]
+                ],
+                'bottom' => [
+                    136,
+                    'facing' => [
+                        136,
+                        'east'  => 136,
+                        'west'  => 136 | 1 << 8,
+                        'south' => 136 | 2 << 8,
+                        'north' => 136 | 3 << 8
+                    ]
+                ]
+            ]
+        ];
         self::$palette['command_block'] = [137];
         self::$palette['beacon'] = [138];
         self::$palette['cobblestone_wall'] = [139];
@@ -434,22 +724,160 @@ abstract class NamedId
         self::$palette['quartz_ore'] = [153];
         self::$palette['hopper'] = [154];
         self::$palette['quartz_block'] = [155];
-        self::$palette['quartz_stairs'] = [156];
+        self::$palette['quartz_stairs'] = [
+            156,
+            'half' => [
+                156,
+                'top'    => [
+                    156 | 4 << 8,
+                    'facing' => [
+                        156 | 4 << 8,
+                        'east'  => 156 | 4 << 8,
+                        'west'  => 156 | 5 << 8,
+                        'south' => 156 | 6 << 8,
+                        'north' => 156 | 7 << 8
+                    ]
+                ],
+                'bottom' => [
+                    156,
+                    'facing' => [
+                        156,
+                        'east'  => 156,
+                        'west'  => 156 | 1 << 8,
+                        'south' => 156 | 2 << 8,
+                        'north' => 156 | 3 << 8
+                    ]
+                ]
+            ]
+        ];
         self::$palette['activator_rail'] = [157];
         self::$palette['dropper'] = [158];
-        self::$palette['stained_hardened_clay'] = [159];
-        self::$palette['stained_glass_pane'] = [160];
+        self::$palette['stained_hardened_clay'] = [
+            159,
+            'color' => [
+                159,
+                'white'      => 159,
+                'orange'     => 159 | 1 << 8,
+                'magenta'    => 159 | 2 << 8,
+                'light_blue' => 159 | 3 << 8,
+                'yellow'     => 159 | 4 << 8,
+                'lime'       => 159 | 5 << 8,
+                'pink'       => 159 | 6 << 8,
+                'gray'       => 159 | 7 << 8,
+                'silver'     => 159 | 8 << 8,
+                'cyan'       => 159 | 9 << 8,
+                'purple'     => 159 | 10 << 8,
+                'blue'       => 159 | 11 << 8,
+                'brown'      => 159 | 12 << 8,
+                'green'      => 159 | 13 << 8,
+                'red'        => 159 | 14 << 8,
+                'black'      => 159 | 15 << 8,
+            ]
+        ];
+        self::$palette['stained_glass_pane'] = [
+            160,
+            'color' => [
+                160,
+                'white'      => 160,
+                'orange'     => 160 | 1 << 8,
+                'magenta'    => 160 | 2 << 8,
+                'light_blue' => 160 | 3 << 8,
+                'yellow'     => 160 | 4 << 8,
+                'lime'       => 160 | 5 << 8,
+                'pink'       => 160 | 6 << 8,
+                'gray'       => 160 | 7 << 8,
+                'silver'     => 160 | 8 << 8,
+                'cyan'       => 160 | 9 << 8,
+                'purple'     => 160 | 10 << 8,
+                'blue'       => 160 | 11 << 8,
+                'brown'      => 160 | 12 << 8,
+                'green'      => 160 | 13 << 8,
+                'red'        => 160 | 14 << 8,
+                'black'      => 160 | 15 << 8,
+            ]
+        ];
         self::$palette['leaves2'] = [161];
         self::$palette['log2'] = [162];
-        self::$palette['acacia_stairs'] = [163];
-        self::$palette['dark_oak_stairs'] = [164];
+        self::$palette['acacia_stairs'] = [
+            163,
+            'half' => [
+                163,
+                'top'    => [
+                    163 | 4 << 8,
+                    'facing' => [
+                        163 | 4 << 8,
+                        'east'  => 163 | 4 << 8,
+                        'west'  => 163 | 5 << 8,
+                        'south' => 163 | 6 << 8,
+                        'north' => 163 | 7 << 8
+                    ]
+                ],
+                'bottom' => [
+                    163,
+                    'facing' => [
+                        163,
+                        'east'  => 163,
+                        'west'  => 163 | 1 << 8,
+                        'south' => 163 | 2 << 8,
+                        'north' => 163 | 3 << 8
+                    ]
+                ]
+            ]
+        ];
+        self::$palette['dark_oak_stairs'] = [
+            164,
+            'half' => [
+                164,
+                'top'    => [
+                    164 | 4 << 8,
+                    'facing' => [
+                        164 | 4 << 8,
+                        'east'  => 164 | 4 << 8,
+                        'west'  => 164 | 5 << 8,
+                        'south' => 164 | 6 << 8,
+                        'north' => 164 | 7 << 8
+                    ]
+                ],
+                'bottom' => [
+                    164,
+                    'facing' => [
+                        164,
+                        'east'  => 164,
+                        'west'  => 164 | 1 << 8,
+                        'south' => 164 | 2 << 8,
+                        'north' => 164 | 3 << 8
+                    ]
+                ]
+            ]
+        ];
         self::$palette['slime'] = [165];
         self::$palette['barrier'] = [166];
         self::$palette['iron_trapdoor'] = [167];
         self::$palette['prismarine'] = [168];
         self::$palette['sea_lantern'] = [169];
         self::$palette['hay_block'] = [170];
-        self::$palette['carpet'] = [171];
+        self::$palette['carpet'] = [
+            171,
+            'color' => [
+                171,
+                'white'      => 171,
+                'orange'     => 171 | 1 << 8,
+                'magenta'    => 171 | 2 << 8,
+                'light_blue' => 171 | 3 << 8,
+                'yellow'     => 171 | 4 << 8,
+                'lime'       => 171 | 5 << 8,
+                'pink'       => 171 | 6 << 8,
+                'gray'       => 171 | 7 << 8,
+                'silver'     => 171 | 8 << 8,
+                'cyan'       => 171 | 9 << 8,
+                'purple'     => 171 | 10 << 8,
+                'blue'       => 171 | 11 << 8,
+                'brown'      => 171 | 12 << 8,
+                'green'      => 171 | 13 << 8,
+                'red'        => 171 | 14 << 8,
+                'black'      => 171 | 15 << 8,
+            ]
+        ];
         self::$palette['hardened_clay'] = [172];
         self::$palette['coal_block'] = [173];
         self::$palette['packed_ice'] = [174];
@@ -458,7 +886,32 @@ abstract class NamedId
         self::$palette['wall_banner'] = [177];
         self::$palette['daylight_detector_inverted'] = [178];
         self::$palette['red_sandstone'] = [179];
-        self::$palette['red_sandstone_stairs'] = [180];
+        self::$palette['red_sandstone_stairs'] = [
+            180,
+            'half' => [
+                180,
+                'top'    => [
+                    180 | 4 << 8,
+                    'facing' => [
+                        180 | 4 << 8,
+                        'east'  => 180 | 4 << 8,
+                        'west'  => 180 | 5 << 8,
+                        'south' => 180 | 6 << 8,
+                        'north' => 180 | 7 << 8
+                    ]
+                ],
+                'bottom' => [
+                    180,
+                    'facing' => [
+                        180,
+                        'east'  => 180,
+                        'west'  => 180 | 1 << 8,
+                        'south' => 180 | 2 << 8,
+                        'north' => 180 | 3 << 8
+                    ]
+                ]
+            ]
+        ];
         self::$palette['double_stone_slab2'] = [181];
         self::$palette['stone_slab2'] = [182];
         self::$palette['spruce_fence_gate'] = [183];
@@ -481,7 +934,32 @@ abstract class NamedId
         self::$palette['chorus_flower'] = [200];
         self::$palette['purpur_block'] = [201];
         self::$palette['purpur_pillar'] = [202];
-        self::$palette['purpur_stairs'] = [203];
+        self::$palette['purpur_stairs'] = [
+            203,
+            'half' => [
+                203,
+                'top'    => [
+                    203 | 4 << 8,
+                    'facing' => [
+                        203 | 4 << 8,
+                        'east'  => 203 | 4 << 8,
+                        'west'  => 203 | 5 << 8,
+                        'south' => 203 | 6 << 8,
+                        'north' => 203 | 7 << 8
+                    ]
+                ],
+                'bottom' => [
+                    203,
+                    'facing' => [
+                        203,
+                        'east'  => 203,
+                        'west'  => 203 | 1 << 8,
+                        'south' => 203 | 2 << 8,
+                        'north' => 203 | 3 << 8
+                    ]
+                ]
+            ]
+        ];
         self::$palette['purpur_double_slab'] = [204];
         self::$palette['purpur_slab'] = [205];
         self::$palette['end_bricks'] = [206];

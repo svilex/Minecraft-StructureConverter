@@ -43,7 +43,7 @@ namespace svile {
 
     if (substr($path, -4) == '.nbt') {
         StructureBlock::toSchematic($path);
-    } elseif (substr($path, -4) != '.schematic') {
+    } elseif (substr($path, -10) == '.schematic') {
         Console::error('§f*.schematic §cto §f.*nbt §cisn\'t avaible yet');
     } else {
         Console::error('§cThe file must be an §f*.nbt§c or a §f*.schematic');
